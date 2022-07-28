@@ -3,15 +3,19 @@
 body, html{
     height: 100%;
     width: 100%;
+    
+}
+
+*{
+    box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-    outline: 8px red solid;
     font-family: Roboto, sans-serif;
 }
 
 .mainContainer{
     display: grid;
-    grid-template-rows:12fr 3fr 7fr;
+    grid-template-rows:12fr 3fr 8fr;
     height: 100%;
     width: 100%;
     color: theme.$sunny-clear_color ;
@@ -38,10 +42,50 @@ body, html{
     flex-direction:column ;
     align-items: center;
     justify-content: center;
-    outline: 2px solid red;
-   
+    // outline: 2px solid red;
+    width: 100%;
+    gap: 0px;
+
+    h2{
+        font-size: max(calc(30px + calc(1.3vw - 1rem)),21px);
+        margin: 0px;
+    }
 }
 
+.rigthWeatherData{
+    grid-column: 2/3;
+    // outline: 2px solid pink;
+    height: 100%;
+    padding: 20px 0px 20px 0px;
+
+    
+    ol{
+        display: flex;
+        flex-direction:column ;
+        align-items: flex-start;
+        justify-content: space-around;
+        font-weight: 400;
+        height: inherit;
+
+        li{
+            display: flex;
+            flex-direction: row;
+            list-style: none;
+            align-items: center;
+            font-size: max(calc(18px + calc(1.3vw - 1rem)),12px);
+            // outline: 2px solid rebeccapurple;
+            width: 100%;
+        }
+    }
+}
+
+.dataContainer{
+    display: flex;
+    flex-direction:row;
+    gap: 8px;
+    // outline: 2px solid greenyellow;
+    margin-left: 15px;
+}
 
 @media (max-width: 600px) {
   body {

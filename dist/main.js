@@ -16,17 +16,27 @@
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_skeleton_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/skeleton.scss */ \"./src/styles/skeleton.scss\");\n\n\n//# sourceURL=webpack://weather_app/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _styles_UpperPart_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/UpperPart.scss */ \"./src/styles/UpperPart.scss\");\n/* harmony import */ var _styles_images_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles/images.scss */ \"./src/styles/images.scss\");\n\n\n\n//# sourceURL=webpack://weather_app/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/styles/skeleton.scss":
-/*!**********************************!*\
-  !*** ./src/styles/skeleton.scss ***!
-  \**********************************/
+/***/ "./src/styles/UpperPart.scss":
+/*!***********************************!*\
+  !*** ./src/styles/UpperPart.scss ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://weather_app/./src/styles/skeleton.scss?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://weather_app/./src/styles/UpperPart.scss?");
+
+/***/ }),
+
+/***/ "./src/styles/images.scss":
+/*!********************************!*\
+  !*** ./src/styles/images.scss ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://weather_app/./src/styles/images.scss?");
 
 /***/ })
 

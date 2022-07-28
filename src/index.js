@@ -1,1 +1,2 @@
-import './styles/skeleton.scss';
+import './styles/UpperPart.scss';
+import './styles/images.scss'
