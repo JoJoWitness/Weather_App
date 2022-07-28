@@ -1,0 +1,89 @@
+@use 'theme';
+
+body, html{
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    outline: 8px red solid;
+    font-family: Roboto, sans-serif;
+}
+
+.mainContainer{
+    display: grid;
+    grid-template-rows:12fr 3fr 7fr;
+    height: 100%;
+    width: 100%;
+    color: theme.$sunny-clear_color ;
+    background: theme.$sunny_clear_background;
+    background: theme.$sunny-clear_gradient;
+}
+
+.weatherDataContainer{
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 9fr 8fr;
+    justify-self: center;
+    align-self: center;
+    width: max(40%, 300px);
+    height: 80%;
+    background-color: rgba(10, 10, 25, 0.1);
+    border-radius: 45px;
+   
+}
+
+.leftWeatherData{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+    outline: 2px solid red;
+   
+}
+
+
+@media (max-width: 600px) {
+  body {
+    margin: 8px;
+  }
+}
+
+.cityInputContainer{
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    outline: 2px red solid;
+
+    h1{
+        padding: 0px;
+        margin: 0px 0px 10px 0px;
+        font-size: 35px;
+    }
+}
+.hourlyWeather{
+    grid-row: 3/4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    li{
+        list-style: none;
+    }
+}
+
+.inputBox{
+    width: 250px;
+    height: 25px;
+    border-radius: 10px;
+    border:none;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.inputBox:focus{
+    outline: none;
+    border: none;
+}
