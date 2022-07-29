@@ -15,7 +15,7 @@ body, html {
 
 .mainContainer {
   display: grid;
-  grid-template-rows: 12fr 3fr 8fr;
+  grid-template-rows: 12fr 1fr 8fr;
   height: 100%;
   width: 100%;
   color: #EFF6FB;
@@ -83,20 +83,6 @@ body, html {
     margin: 8px;
   }
 }
-.cityInputContainer {
-  grid-row: 2/3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  outline: 2px red solid;
-}
-.cityInputContainer h1 {
-  padding: 0px;
-  margin: 0px 0px 10px 0px;
-  font-size: 35px;
-}
-
 .hourlyWeather {
   grid-row: 3/4;
   display: flex;
@@ -106,22 +92,8 @@ body, html {
 .hourlyWeather li {
   list-style: none;
 }
-
-.inputBox {
-  width: 250px;
-  height: 25px;
-  border-radius: 10px;
-  border: none;
-  background-color: transparent;
-  font-size: 20px;
-}
-
-.inputBox:focus {
-  outline: none;
-  border: none;
-}
 /*!*****************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/images.scss ***!
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/Images.scss ***!
   \*****************************************************************************************************************/
 .leftWeatherData img {
   filter: invert(85%) sepia(5%) saturate(559%) hue-rotate(156deg) brightness(108%) contrast(99%);
@@ -131,6 +103,69 @@ body, html {
 
 .rigthWeatherData img {
   filter: invert(85%) sepia(5%) saturate(559%) hue-rotate(156deg) brightness(108%) contrast(99%);
-  height: inherit;
+  height: 60px;
   width: auto;
+}
+
+.cityInputContainer img {
+  filter: invert(85%) sepia(5%) saturate(559%) hue-rotate(156deg) brightness(108%) contrast(99%);
+  height: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.gps {
+  margin-left: -10px;
+}
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/Input.scss ***!
+  \****************************************************************************************************************/
+.cityInputContainer {
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputForm {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: max(300px, 23.5vw);
+  border-bottom: 3px solid #EFF6FB;
+}
+.inputForm div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+.inputForm div input, .inputForm div input:focus {
+  outline: none;
+  border: none;
+  border-radius: 0px;
+  padding: 10px 20px 10px 20px;
+  height: 45px;
+  font-size: 25px;
+  width: max(250px, 20vw);
+  color: #EFF6FB;
+  background-color: transparent;
+}
+.inputForm div input::-webkit-input-placeholder {
+  color: #EFF6FB;
+}
+
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+fieldset {
+  border: none;
+}
+
+.searchButton, .searchButton:focus {
+  background-color: transparent;
+  border: none;
 }

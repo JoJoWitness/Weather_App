@@ -1,0 +1,66 @@
+@use 'Theme';
+
+.cityInputContainer{
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    // outline: 2px red solid;
+
+   
+
+    
+}
+
+.inputForm{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: max(300px, 23.5vw);
+    // outline: 2px solid indigo;
+    border-bottom: 3px solid Theme.$sunny-clear_color;
+
+    
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+       
+
+        
+
+        input, input:focus{
+            outline: none;
+            border: none;
+           
+            border-radius: 0px;
+            padding: 10px 20px 10px 20px;
+            height: 45px;
+            font-size: 25px;
+            width: max(250px, 20vw);
+            color: Theme.$sunny-clear_color;
+            // outline: 2px solid tomato;
+            background-color: transparent;
+            
+        }
+        input::-webkit-input-placeholder{
+            color: Theme.$sunny-clear_color;
+    }   
+}
+}
+
+input::-webkit-search-cancel-button{
+    display: none;
+}
+
+fieldset{
+    border: none;
+}
+
+.searchButton, .searchButton:focus{
+    background-color: transparent;
+    border: none;
+    
+}

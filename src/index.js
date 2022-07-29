@@ -1,2 +1,3 @@
 import './styles/UpperPart.scss';
-import './styles/images.scss'
+import './styles/Images.scss'
+import './styles/Input.scss'
