@@ -1,0 +1,56 @@
+.hourlyWeatherContainer{
+    grid-row: 3/4;
+    display: flex;
+    align-items: center;
+    // outline: 2px solid violet;
+    height: 100%;
+    width: 100vw;
+
+    ol{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: inherit;
+    height: inherit;
+    justify-content: space-around;
+    overflow-x: scroll;
+    
+        li{
+            list-style: none;
+        }
+    }
+
+    ol::-webkit-scrollbar{
+        display:none;
+        scroll-behavior: smooth;
+    }
+
+    
+}
+
+
+
+.hourlyWeatherElement{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // outline: 2px solid chocolate;
+    width: max(11vw, 150px);
+    height: 50%;
+    font-weight: 700;
+
+        
+    p{
+        font-size: max(calc(22px + calc(1.3vw - 1rem)),16px);
+        margin-top: 10px;
+    }
+
+    p:first-child{
+        font-size: max(calc(22px + calc(1.3vw - 1rem)),16px);
+        font-weight:300;
+    }
+
+
+}
+

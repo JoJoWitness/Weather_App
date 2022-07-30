@@ -34,3 +34,11 @@ img{
 .gps{
     margin-left: -10px;
 }
+
+.hourlyWeatherElement{
+    
+img{
+    height: 140px;
+    filter: Theme.$day-filter;
+ }
+}

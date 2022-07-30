@@ -15,7 +15,7 @@ body, html{
 
 .mainContainer{
     display: grid;
-    grid-template-rows:12fr 1fr 8fr;
+    grid-template-rows:12fr 2fr 8fr;
     height: 100%;
     width: 100%;
     color: Theme.$sunny-clear_color ;
@@ -94,14 +94,4 @@ body, html{
 }
 
 
-.hourlyWeather{
-    grid-row: 3/4;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    li{
-        list-style: none;
-    }
-}
 
