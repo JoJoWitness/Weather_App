@@ -1,4 +1,4 @@
-@use 'Theme';
+@import 'Theme.scss';
 
 .cityInputContainer{
     grid-row: 2/3;
@@ -19,7 +19,7 @@
     height: 50%;
     width: max(300px, 23.5vw);
     // outline: 2px solid indigo;
-    border-bottom: 3px solid Theme.$sunny-clear_color;
+    border-bottom: 3px solid var(--color);
 
     
     div{
@@ -40,13 +40,13 @@
             height: 45px;
             font-size: 25px;
             width: max(250px, 20vw);
-            color: Theme.$sunny-clear_color;
+            color: var(--color);
             // outline: 2px solid tomato;
             background-color: transparent;
             
         }
         input::-webkit-input-placeholder{
-            color: Theme.$sunny-clear_color;
+            color: var(--color);
     }   
 }
 }

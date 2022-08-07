@@ -1,4 +1,4 @@
-@use 'Theme';
+@import 'Theme.scss';
 
 body, html{
     height: 100%;
@@ -18,20 +18,20 @@ body, html{
     grid-template-rows:12fr 2fr 8fr;
     height: 100%;
     width: 100%;
-    color: Theme.$sunny-clear_color ;
-    background: Theme.$sunny_clear_background;
-    background: Theme.$sunny-clear_gradient;
+    color: var(--color) ;
+    background: var(--background);
+    background: var(--gradient);
 }
 
 .weatherDataContainer{
     grid-row: 1/2;
     display: grid;
-    grid-template-columns: 9fr 8fr;
+    grid-template-columns: 10fr 8fr;
     justify-self: center;
     align-self: center;
-    width: max(40%, 300px);
+    width: max(46%, 300px);
     height: 80%;
-    background-color: rgba(10, 10, 25, 0.1);
+    background-color: rgba(8, 22, 23, 0.1);
     border-radius: 45px;
    
 }
@@ -47,7 +47,7 @@ body, html{
     gap: 0px;
 
     h2{
-        font-size: max(calc(30px + calc(1.3vw - 1rem)),21px);
+        font-size: max(calc(28px + calc(1.3vw - 1rem)),21px);
         margin: 0px;
     }
 }

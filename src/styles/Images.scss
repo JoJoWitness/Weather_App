@@ -1,9 +1,9 @@
-@use 'Theme';
+@import 'Theme.scss';
 
 .leftWeatherData{
 
 img{
-    filter: Theme.$day-filter;
+    filter: var(--filter-color);
     width: max(40%, 85px);
     // outline: 2px solid red;
     margin: 30px 0px 15px 0px;
@@ -14,7 +14,7 @@ img{
 .rigthWeatherData{
 
     img{
-        filter: Theme.$day-filter;
+        filter: var(--filter-color);
         height: 60px;
         width: auto;
     }
@@ -22,7 +22,7 @@ img{
 
 .cityInputContainer{
     img{
-    filter: Theme.$day-filter;
+    filter: var(--filter-color);
     height: 40px;
     
     background-color: transparent;
@@ -39,6 +39,6 @@ img{
     
 img{
     height: 140px;
-    filter: Theme.$day-filter;
+    filter: var(--filter-color);
  }
 }

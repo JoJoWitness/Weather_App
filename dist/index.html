@@ -11,8 +11,8 @@
         <div class="mainContainer">
             <div class="weatherDataContainer">
                 <div class="leftWeatherData">
-                  <h2 class="js-cityName">Laneca, Alduvia</h2>
-                  <img src="../src/images/NightWithClouds.svg" class="js-WeatherLike WeatherLike" >
+                  <h2 class="js-cityName">Laneca</h2>
+                  <img src="../src/images/nightWithClouds.svg" class="js-WeatherLike WeatherLike" >
                   <h2 class="js-Temperature">18°c</h2>
                 </div>
                   <div class="rigthWeatherData">
@@ -35,102 +35,47 @@
                         <img src="../src/images/humidity.png">
                         <div class="dataContainer">
                           <p>Humidity:</p>
-                          <div  class="js-Humidity"> 63% </div>
+                          <div  class="js-humidity"> 63% </div>
                         </div>
                       </li>
                       <li>
                         <img src="../src/images/WindVelocity.svg">
                         <div class="dataContainer">
                           <p>Wind Velocity:</p>
-                          <div class="js-windsVelocity"> 8 km/h</div>
+                          <div class="js-windVelocity"> 8 km/h</div>
                         </div>
                       </li>
                       <li>
                         <img src="../src/images/UVrays.svg">
                         <div class="dataContainer">
                           <p>Uv Rays:</p>
-                          <div class="js-UVrays"> Low </div>
+                          <div class="js-UvRays"> Low </div>
                         </div>
                       </li>
                     </ol>
                   </div>
             </div>
               <div class="cityInputContainer">
-                <img class="js-gps gps" src="../src/images/Location(Fill).svg">
+                <img class="js-location gps" src="../src/images/Location(Fill).svg">
                 <form class="inputForm">
                   
                   <fieldset>
                     <div>
-                        <input type="search" id="city" name="city" maxlength="40" placeholder="Search a city..." autocomplete="off">
+                        <input type="search" id="city" class="js-city" name="city" maxlength="40" placeholder="Search a city..." autocomplete="off">
                     </div>
                  </fieldset>
                     <button class="js-search searchButton" type='button'>
-                      <img src="../src/images/Rename.svg">
+                      <img class="" src="../src/images/Rename.svg">
                     </button>
                 </form>
               </div>
               <nav class="hourlyWeatherContainer">
-                <ol>
-                  <li>
-                    <div class="hourlyWeatherElement">
-                      <p class="js-hourlyCity">22:00</p>
-                      <p class="js-hourlyTemperature">18°</p>
-                      <img src="../src/images/NightWithClouds.svg" class="js-WeatherLike WeatherLike" >
-                    </div>
+                <ol class="js-ol">
+                  <li class="hourlyWeatherElement">
+                    <p class="js-hourlyCity">22:00</p>
+                    <p class="js-hourlyTemperature">18°</p>
+                    <img src="../src/images/nightWithClouds.svg" class="js-WeatherLike WeatherLike" >
                   </li>
-
-                  <li>
-                    <div class="hourlyWeatherElement">
-                      <p class="js-hourlyCity">22:00</p>
-                      <p class="js-hourlyTemperature">18°</p>
-                      <img src="../src/images/NightWithClouds.svg" class="js-WeatherLike WeatherLike" >
-                    </div>
-                  </li>
-                  <li>
-                    <div class="hourlyWeatherElement">
-                      <p class="js-hourlyCity">22:00</p>
-                      <p class="js-hourlyTemperature">18°</p>
-                      <img src="../src/images/NightWithClouds.svg" class="js-WeatherLike WeatherLike" >
-                    </div>
-                  </li>
-                  <li>
-                    <div class="hourlyWeatherElement">
-                      <p class="js-hourlyCity">22:00</p>
-                      <p class="js-hourlyTemperature">18°</p>
-                      <img src="../src/images/NightWithClouds.svg" class="js-WeatherLike WeatherLike" >
-                    </div>
-                  </li>
-                  <li>
-                    <div class="hourlyWeatherElement">
-                      <p class="js-hourlyCity">22:00</p>
-                      <p class="js-hourlyTemperature">18°</p>
-                      <img src="../src/images/NightWithClouds.svg" class="js-WeatherLike WeatherLike" >
-                    </div>
-                  </li>
-                  <li>
-                    <div class="hourlyWeatherElement">
-                      <p class="js-hourlyCity">22:00</p>
-                      <p class="js-hourlyTemperature">18°</p>
-                      <img src="../src/images/NightWithClouds.svg" class="js-WeatherLike WeatherLike" >
-                    </div>
-                  </li>
-                  <li>
-                    <div class="hourlyWeatherElement">
-                      <p class="js-hourlyCity">22:00</p>
-                      <p class="js-hourlyTemperature">18°</p>
-                      <img src="../src/images/NightWithClouds.svg" class="js-WeatherLike WeatherLike" >
-                    </div>
-                  </li>
-                  <li>
-                    <div class="hourlyWeatherElement">
-                      <p class="js-hourlyCity">22:00</p>
-                      <p class="js-hourlyTemperature">18°</p>
-                      <img src="../src/images/NightWithClouds.svg" class="js-WeatherLike WeatherLike" >
-                    </div>
-                  </li>
-                  
-
-
                 </ol>
               </nav>
         </div>
