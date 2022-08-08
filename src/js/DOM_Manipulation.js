@@ -6,9 +6,9 @@ import Thunderstorm from "../images/thunderstorm.svg"
 import Night from "../images/night.svg"
 import Clouds_Night from "../images/nightWithClouds.svg"
 import Mist from "../images/mist.svg"
-import {format} from 'date-fns'
+import parseISO from "date-fns"
 import selectClass from "./theme"
-
+import { format, utcToZonedTime } from "date-fns-tz";
 
 function getDOM_Element(weatherData, city){
     getLeft_Elements(weatherData, city);
@@ -23,10 +23,20 @@ function getLeft_Elements(weatherData, city){
 
     cityName.textContent = city;
     let weather= weatherData.current.weather[0].main
+
     let time = weatherData.hourly[0].dt;
-    let timeFormated = format(time*1000, 'HH')
-    weatherLike.src = getImage(weather, timeFormated);
-    selectClass(weather, timeFormated)
+    // let timeFormated = format(time*1000, 'HH')
+    console.log('peto')
+    const formatInTimeZone = (date, fmt, tz) =>
+    format(utcToZonedTime(date, tz), 
+    fmt, 
+    { timeZone: tz });
+    console.log('peto')
+    const formattedTime = formatInTimeZone((time + weatherData.timezone_offset)*1000, "HH", "UTC");
+    console.log('peto')
+    weatherLike.src = getImage(weather, formattedTime);
+    console.log('peto')
+    selectClass(weather, formattedTime)
     temperature.textContent= parseInt(weatherData.current.temp) + '°c'
     
 }
@@ -92,18 +102,29 @@ function getHourlyElement(weatherData){
     let ol = document.querySelector('.js-ol')
     ol.remove()
     const nav = document.querySelector('.js-nav')
-    console.log('cat')
     ol = document.createElement('ol')
     ol.className = 'js-ol'
-    console.log('cato')
     nav.append(ol)
     for(let i = 1 ; i <= 24; i++){
-        let time = weatherData.hourly[i].dt;
-        let timeFormated = format(time*1000, 'HH:00')
+        let time = weatherData.hourly[i].dt
+
+        const formatInTimeZone = (date, fmt, tz) =>
+         format(utcToZonedTime(date, tz), 
+         fmt, 
+         { timeZone: tz });
+
+         const formattedTime = formatInTimeZone((time + weatherData.timezone_offset)*1000, "HH:00", "UTC");
+
+         console.log(formattedTime)
+
+
+        // let timeFormated = format(time*1000, 'HH:00')
+
+
         let timeImg = format(time*1000, 'HH')
         let temperature = parseInt(weatherData.hourly[i].temp);
         let weather = weatherData.hourly[i].weather[0].main;
-        ol.append(createHourlyElement(timeFormated, temperature, weather, timeImg))
+        ol.append(createHourlyElement(formattedTime, temperature, weather, timeImg))
     }
 
 }
