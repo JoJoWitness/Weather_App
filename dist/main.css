@@ -38,6 +38,12 @@ body, html, :root {
   width: 100%;
 }
 
+html {
+  color: var(--color);
+  background-color: var(--background);
+  background-blend-mode: var(--gradient);
+}
+
 * {
   box-sizing: border-box;
   padding: 0px;
@@ -50,9 +56,6 @@ body, html, :root {
   grid-template-rows: 12fr 2fr 8fr;
   height: 100%;
   width: 100%;
-  color: var(--color);
-  background: var(--background);
-  background: var(--gradient);
 }
 
 .weatherDataContainer {
@@ -113,13 +116,13 @@ body, html, :root {
 
 @media (max-width: 600px) {
   .mainContainer {
-    grid-template-rows: 12fr 2fr 6fr;
+    grid-template-rows: 12fr minmax(100px, 2fr) 6fr;
   }
   .weatherDataContainer {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: none;
-    width: 85%;
-    height: 70%;
+    width: 90%;
+    height: 85%;
     border-radius: 20px;
     padding: 20px 20px 20px 20px;
   }
@@ -142,14 +145,14 @@ body, html, :root {
     grid-column: 1/2;
     grid-row: 2/3;
     overflow-x: scroll;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 5px;
   }
   .rigthWeatherData ol {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 30px;
+    padding: 0px;
     justify-content: flex-start;
   }
   .rigthWeatherData ol li {
