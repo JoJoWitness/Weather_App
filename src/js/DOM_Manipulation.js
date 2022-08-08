@@ -25,17 +25,15 @@ function getLeft_Elements(weatherData, city){
     let weather= weatherData.current.weather[0].main
 
     let time = weatherData.hourly[0].dt;
+
     // let timeFormated = format(time*1000, 'HH')
-    console.log('peto')
+
     const formatInTimeZone = (date, fmt, tz) =>
     format(utcToZonedTime(date, tz), 
     fmt, 
     { timeZone: tz });
-    console.log('peto')
     const formattedTime = formatInTimeZone((time + weatherData.timezone_offset)*1000, "HH", "UTC");
-    console.log('peto')
     weatherLike.src = getImage(weather, formattedTime);
-    console.log('peto')
     selectClass(weather, formattedTime)
     temperature.textContent= parseInt(weatherData.current.temp) + '°c'
     
