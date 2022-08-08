@@ -11,7 +11,8 @@ function initialize(){
     root.className = 'sunny'
     getDOM_Buttons();
     getCityCoordinate('Paris');
-    getCurrentLocation()
+    setTimeout(getCurrentLocation, 1000)
+    
 
 
 }
