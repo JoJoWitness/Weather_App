@@ -3,5 +3,17 @@ import '../styles/Images.scss'
 import '../styles/Input.scss'
 import '../styles/NavHourly.scss'
 import getDOM_Buttons from './input';
+import {getCurrentLocation} from './input';
+import {getCityCoordinate} from './weather_Call'
 
-getDOM_Buttons()
+function initialize(){
+    const root = document.documentElement;
+    root.className = 'sunny'
+    getDOM_Buttons();
+    getCityCoordinate('Paris');
+    getCurrentLocation()
+
+
+}
+
+initialize()

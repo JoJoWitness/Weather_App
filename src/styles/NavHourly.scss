@@ -9,14 +9,12 @@
     width: 100vw;
 
     ol{
-    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    width: inherit;
+    width: 100%;
     height: inherit;
-    justify-content: space-around;
     overflow-x: scroll;
     
         li{
@@ -41,10 +39,11 @@
       ::-webkit-scrollbar-thumb {
         background: var(--color);
         border-radius: 10px;
-        width: 1000px;
+        width: 100px;
       }
       
 }
+
 
 
 
@@ -53,7 +52,7 @@
     flex-direction: column;
     align-items: center;
     // outline: 2px solid chocolate;
-    width: max(11vw, 150px);
+    width: max(10vw, 100px);
     height: 50%;
     font-weight: 700;
 
@@ -71,3 +70,29 @@
 
 }
 
+@media (max-width: 600px) {
+    .hourlyWeatherContainer {
+        
+        padding: 0px 20px 0px 20px;
+
+        ol::-webkit-scrollbar, ol::-webkit-scrollbar-thumb{
+            display: none;
+        }
+     
+    
+  }
+
+  .hourlyWeatherElement{
+
+       p{ 
+        font-size: 20px;
+        margin-top: 6px;
+    }
+
+    p:first-child{
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 0px;
+    }
+  }
+}

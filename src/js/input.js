@@ -1,4 +1,4 @@
-import getCityCoordinate from "./weather_Call";
+import {getCityCoordinate, getCity_WithCoordinate} from "./weather_Call";
 
 
 
@@ -13,10 +13,11 @@ function getCurrentLocation(){
 function success(pos) {
     const crd = pos.coords;
     console.log(crd);
-    console.log('Your current position is:');
-    console.log(`Latitude : ${crd.latitude}`);
-    console.log(`Longitude: ${crd.longitude}`);
-    console.log(`More or less ${crd.accuracy} meters.`);
+  
+    let lat = crd.latitude
+    let lon = crd.longitude
+
+    getCity_WithCoordinate(lat, lon)
   }
 
   function err(err) {
@@ -37,3 +38,4 @@ function getCity(){
 }
 
 export default getDOM_Buttons
+export {getCurrentLocation} 

@@ -42,3 +42,24 @@ img{
     filter: var(--filter-color);
  }
 }
+
+
+@media (max-width: 600px) {
+
+    .leftWeatherData{
+
+        img{
+            width: 100px;
+        }
+        
+        }
+
+    .rigthWeatherData{
+
+        img{
+            height: 70px;
+            width: auto;
+        }
+    }
+
+}
