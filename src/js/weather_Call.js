@@ -2,7 +2,7 @@ import getDOM_Element from './DOM_Manipulation'
 
 async function getCityCoordinate(city) {
     try{
-    const cityResponse = await fetch(`https//api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=e6ce228c45a907c44d46d3de48159d57`, {mode: 'cors'});
+    const cityResponse = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=e6ce228c45a907c44d46d3de48159d57`, {mode: 'cors'});
     const cityData = await cityResponse.json();
     console.log(cityData)
     
@@ -13,7 +13,7 @@ async function getCityCoordinate(city) {
     getCityWeather(lat, lon, cityName)
     }
     catch(err){
-    console.log('Tlacuache1')
+    console.log('TlacuacheMalo')
     }
 }
 
@@ -26,7 +26,7 @@ async function getCityWeather(lat, lon, city){
         
         }
     catch(err){
-    console.log('Tlacuache2')
+    console.log('TlacuacheMal')
     }
 }
 
@@ -40,7 +40,7 @@ async function getCity_WithCoordinate(lat, lon){
         
         }
     catch(err){
-    console.log('Tlacuache3')
+    console.log('TlacuacheMaltito')
     }
 }
 
