@@ -6,7 +6,12 @@ function getDOM_Buttons(){
     const locationDOM = document.querySelector('.js-location');
     locationDOM.addEventListener('click', getCurrentLocation);
     const searchDOM = document.querySelector('.js-search');
-    searchDOM.addEventListener('click',getCity)
+    searchDOM.addEventListener('click',getCity )
+    searchDOM.addEventListener('submit', function(e){
+      e.preventDefault()});
+    const cityInput = document.querySelector('.js-city');
+    cityInput.addEventListener('submit', function(e){
+    e.preventDefault()}, false);
 }
 
 function getCurrentLocation(){
@@ -36,6 +41,13 @@ function getCity(){
 
     getCityCoordinate(city)
 }
+
+function pressEnter(e){
+  if (e.key === 'Enter'){getCity();}
+  
+}
+
+window.addEventListener('keydown', pressEnter)
 
 export default getDOM_Buttons
 export {getCurrentLocation} 

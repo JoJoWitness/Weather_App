@@ -60,7 +60,6 @@ function getRight_Elements(weatherData){
 
 function getImage(weatherLike, timeImg){
     let img;
-    const root = document.documentElement;
     switch(weatherLike){
         case 'Clear': 
             if(parseInt(timeImg) > 6 && parseInt(timeImg) < 19){
@@ -119,7 +118,7 @@ function getHourlyElement(weatherData){
         // let timeFormated = format(time*1000, 'HH:00')
 
 
-        let timeImg = format(time*1000, 'HH')
+        let timeImg = formatInTimeZone((time + weatherData.timezone_offset)*1000, "HH", "UTC");
         let temperature = parseInt(weatherData.hourly[i].temp);
         let weather = weatherData.hourly[i].weather[0].main;
         ol.append(createHourlyElement(formattedTime, temperature, weather, timeImg))
